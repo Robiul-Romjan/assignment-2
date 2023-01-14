@@ -73,7 +73,7 @@ header {
     color: #424242;
 }
 
-/* banner section styles----------- */
+/* banner section styles----------------------------------------------------------------------- */
 .banner {
     text-align: center;
     margin-top: 100px;
@@ -89,7 +89,6 @@ header {
 .banner-details .banner-title {
     font-weight: 700;
     font-size: 64px;
-    line-height: 75px;
     color: #131313;
 }
 
@@ -117,6 +116,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     width: 100%;
+    text-align: center;
 }
 
 .single-catagoris img {
@@ -143,7 +143,7 @@ header {
     font-size: 16px;
 }
 
-/* architect-section styles--------------------------- */
+/* architect-section styles------------------------------------------------------------------------- */
 .architect-section {
     display: flex;
     gap: 54px;
@@ -261,7 +261,7 @@ header {
     color: #131313;
 }
 
-.sponsors-des{
+.sponsors-des {
     color: #727272;
     font-size: 16px;
     margin-top: 24px;
@@ -272,6 +272,7 @@ header {
     grid-template-columns: repeat(5, 1fr);
     justify-items: center;
     margin-top: 50px;
+    gap: 30px;
 }
 
 .company-icon img {
@@ -282,48 +283,61 @@ header {
 .company-icon img:hover {
     filter: grayscale(0);
 }
+
 /* my extra section styels--------------------------------------------------------------------- */
-.team-member-section{
+.team-member-section {
     margin-top: 100px;
 }
-.team-memeber-heading{
+
+.team-memeber-heading {
     text-align: center;
     width: 542px;
     padding: 10px 15px;
     margin: 0 auto;
 }
-.team-memeber-heading .expert{
+
+.team-memeber-heading .expert {
     color: #727272;
     font-size: 16px;
     margin-top: 24px;
     color: #FF900E;
 }
-.team-title{
+
+.team-title {
     font-weight: 700;
     font-size: 45px;
     color: #131313;
     margin: 24px 0;
 }
-.team-des{
+
+.team-des {
     color: #727272;
     font-size: 16px;
 }
-.member-image{
+
+.global-member {
+    text-align: center;
+}
+
+.member-image {
     position: relative;
 }
-.team-social-profile{
+
+.team-social-profile {
     position: absolute;
     bottom: 0;
     right: 0;
     left: 0;
     margin: auto;
 }
-.team-social-profile ul{
+
+.team-social-profile ul {
     text-align: center;
     padding-left: 0;
     margin-bottom: 30px;
 }
-.team-social-profile li{
+
+.team-social-profile li {
     display: inline-block;
     list-style: none;
     margin: 0 5px;
@@ -333,7 +347,8 @@ header {
     visibility: hidden;
 
 }
-.team-social-profile li a{
+
+.team-social-profile li a {
     display: block;
     font-size: 20px;
     height: 35px;
@@ -344,29 +359,29 @@ header {
     color: #ffff;
 }
 
-.member-image:hover .team-social-profile li{
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.member-image:hover .team-social-profile li {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
-.team-member-details{
+.team-member-details {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     margin-top: 45px;
 }
 
-.member-bio{
+.member-bio {
     margin-top: 15px;
 }
 
-.member-bio h4{
+.member-bio h4 {
     color: #FF900E;
     font-size: 20px;
 }
 
-.member-bio p{
+.member-bio p {
     font-size: 16px;
     color: #727272;
 }
@@ -381,6 +396,110 @@ footer {
 .footer-des p {
     color: #424242;
     font-size: 20px;
-    line-height: 23px;
     text-align: center;
+}
+
+/* End styles for windows------------------------------------------------------------------------ */
+
+/* responsive styels start---------------------------------------------------------------------------- */
+
+/* responsive for small device------------------------- */
+@media only screen and (max-width:576px) {
+
+    /* responsive for height/width------- */
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .container-2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .banner-details,
+    .architect-details,
+    .facts,
+    .sponsor-heading,
+    .team-memeber-heading {
+        width: 100%;
+    }
+
+    /* responsive for flex/grid--------- */
+    .navbar {
+        flex-direction: row-reverse;
+        padding: 20px 0;
+        align-items: baseline;
+    }
+
+    .header-menu ul,
+    .features-section,
+    .architect-section {
+        flex-direction: column;
+    }
+
+    .features-catagoris,
+    .achievement,
+    .team-member-details {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: baseline;
+        gap: 50px;
+    }
+
+    .company {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* responsive for all heading/title----------------- */
+    h1 {
+        font-size: 25px !important;
+    }
+
+    h2 {
+        font-size: 23px !important;
+    }
+
+    h3 {
+        font-size: 20px !important;
+    }
+
+    h4 {
+        font-size: 18px !important;
+    }
+
+    .footer-des p {
+        font-size: 10px;
+    }
+
+    /* responsive for all section margin/padding---------------- */
+    .banner,
+    .features-catagoris,
+    .architect-section,
+    .sponsors-section,
+    .team-member-section,
+    footer {
+        margin-top: 50px;
+    }
+
+    /* button and position handle for responsive----------- */
+    .achievement-detail:hover {
+        transform: scale(1.1) rotate(360deg);
+    }
+
+    .btn-primary {
+        background: #FF900E;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 600;
+        border: 0;
+        padding: 15px;
+    }
+
+    .architecter-image button {
+        bottom: -20px;
+        left: 30%;
+    }
+
+
 }
