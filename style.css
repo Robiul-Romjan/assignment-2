@@ -236,8 +236,20 @@ header {
     cursor: pointer;
 }
 
+.achievement-detail h3 {
+    color: #424242;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.achievement-detail p {
+    font-weight: 600;
+    font-size: 20px;
+    color: #727272;
+}
+
 .achievement-detail:hover {
-    transform: scale(1.2) rotate(360deg);
+    transform: scale(1.1) rotate(360deg);
     background: #FF900E;
     color: white;
 }
@@ -424,6 +436,10 @@ footer {
     .team-memeber-heading {
         width: 100%;
     }
+    .achievement-detail{
+        width: 80%;
+        margin: 0 auto;
+    }
 
     /* responsive for flex/grid--------- */
     .navbar {
@@ -440,14 +456,11 @@ footer {
 
     .features-catagoris,
     .achievement,
-    .team-member-details {
+    .team-member-details,
+    .company {
         grid-template-columns: repeat(1, 1fr);
         align-items: baseline;
         gap: 50px;
-    }
-
-    .company {
-        grid-template-columns: repeat(2, 1fr);
     }
 
     /* responsive for all heading/title----------------- */
